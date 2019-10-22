@@ -15,6 +15,19 @@ const PORT = process.env.PORT || 3025;
 // You will be using express Router and Mongoose
 // -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 
+//schema
+const Schema = mongoose.Schema;
+
+const exerciseSchema = new Schema({
+  username: { type: String, required: true },
+  description: { type: String, required: true },
+  duration: { type: Number, required: true },
+  date: { type: Date, required: true },
+}, {
+  timestamps: true,
+});
+
+
 //middleware
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));

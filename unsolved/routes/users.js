@@ -16,6 +16,20 @@ const PORT = process.env.PORT || 3000;
 // to interact with your mongoDB database, as instructed below.
 // You will be using express Router and Mongoose
 // -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+//schema
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+    minlength: 3
+  },
+}, {
+  timestamps: true,
+});
 
 
 //middleware
