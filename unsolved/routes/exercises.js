@@ -5,10 +5,11 @@
 const express = require('express');
 const router = require('express').Router();
 let Exercise = require('../models/exercise.model');
+const mongoose = require('mongoose');
 const app = express();
 const MongoClient = require("mongodb").MongoClient 
 const logger = require("morgan");
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3025;
 // Your Challenge: Make five routes. Each will use mongojs methods
 // to interact with your mongoDB database, as instructed below.
 // You will be using express Router and Mongoose

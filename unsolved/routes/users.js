@@ -5,10 +5,11 @@
 const express = require("express");
 const router = require('express').Router();
 let User = require('../models/user.model');
+const mongoose = require('mongoose');
+const logger = require("morgan");
 const app = express();
-const db = mongojs(databaseUrl, collections);
 const MongoClient = require("mongodb").MongoClient
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3000;
 
 
 // Your Challenge: Make rwo routes. Each will use mongojs methods
